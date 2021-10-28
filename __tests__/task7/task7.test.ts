@@ -32,13 +32,13 @@ typeAssert<
 describe('task7', () => {
     describe('task7#logPerson()', () => {
         it('should work with user', () => {
-            const res = logPerson(persons[0]);
+            const res = persons[0] ? logPerson(persons[0]) : null;
 
             expect(res).toEqual(' - Max Mustermann, 25');
         });
 
         it('should work with admin', () => {
-            const res = logPerson(persons[1]);
+            const res = persons[1] ? logPerson(persons[1]) : null;
 
             expect(res).toEqual(' - Jane Doe, 32');
         });
