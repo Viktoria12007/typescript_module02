@@ -8,6 +8,7 @@
     "check": "./scripts/check.sh",
     "init": "npm i",
     "test": "npm run test:unit",
+    "test:unit": "jest",
     "task1": "ts-node ./src/task1/task1.ts",
     "test:task1": "jest /__tests__/task1",
     "task2": "ts-node ./src/task2/task2.ts",
