@@ -8,7 +8,7 @@ typeAssert<IsTypeEqual<typeof logPerson, (user: {name: string, age: number, occu
 describe('task6', () => {
     describe('task6#logPerson()', () => {
         it('should work', () => {
-            const res = logPerson(users[0]);
+            const res = users[0] ? logPerson(users[0]) : null;
 
             expect(res).toEqual(' - Max Mustermann, 25');
         });
