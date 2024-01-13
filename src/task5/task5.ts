@@ -1,3 +1,3 @@
-export function deepEqual() {
-    throw new Error('function not implemented')
+export function deepEqual(a: object, b: object): boolean {
+    return JSON.stringify(a) === JSON.stringify(b);
 }

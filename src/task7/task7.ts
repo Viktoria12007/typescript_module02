@@ -10,9 +10,9 @@ type Admin = {
     role: string;
 }
 
-export type Person = unknown;
+export type Person = User | Admin;
 
-export const persons: User[] /* <- Person[] */ = [
+export const persons: Person[] /* <- Person[] */ = [
     {
         name: 'Roman Abramov',
         age: 25,
@@ -27,7 +27,7 @@ export const persons: User[] /* <- Person[] */ = [
         name: 'Andrey Fox',
         age: 23,
         occupation: 'Developer'
-    }
+    },
     {
         name: 'Bruce Willis',
         age: 64,
@@ -35,7 +35,7 @@ export const persons: User[] /* <- Person[] */ = [
     }
 ];
 
-export function logPerson(user: Person) {
+export function logPerson(user: Person): string {
     return ` - ${user.name}, ${user.age}`;
 }
 
